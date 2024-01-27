@@ -3,3 +3,11 @@
     height: 100%;
     display: flex;
 }
+
+::ng-deep .mat-drawer-inner-container {
+    background-color: rgb(203 213 225);
+}
+
+mat-sidenav-content {
+    padding: 16px;
+}

@@ -1,13 +1,12 @@
-<mat-sidenav-container class="absolute top-0 bottom-0 left-0 right-0">
-    <mat-sidenav mode="side" opened>
-        <div *ngFor="let navItem of navItems" class="flex justify-centerbg-slate-300 hover:bg-slate-600 hover:text-white">
-            <button>
+<mat-sidenav-container class="absolute top-0 bottom-0 left-0 right-0 w-full">
+    <mat-sidenav mode="side" opened class="w-48">
+        <div *ngFor="let navItem of navItems" class="flex justify-center bg-slate-300 hover:bg-slate-600 hover:text-white">
+            <a class="clickable" [routerLink]="navItem?.path">
                 <div class=" p-4">{{navItem?.title}}</div>
-            </button>
+            </a>
         </div>
     </mat-sidenav>
     <mat-sidenav-content>
         <ng-content></ng-content>
     </mat-sidenav-content>
 </mat-sidenav-container>
-<!-- flex flex-1 flex-col bg-slate-300 -->

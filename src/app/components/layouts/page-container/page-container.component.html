@@ -1,0 +1,15 @@
+<div class="flex flex-col h-full">
+    <div class="flex flex-row items-center justify-between">
+        <h1>{{header}}</h1>
+
+        <button mat-raised-button color="primary" class="!p-6">
+            <div class="flex flex-row items-center gap-2">
+                <mat-icon>add_circle_outline</mat-icon>
+                <p>{{addButtonText}}</p>
+            </div>
+        </button>
+    </div>
+    <div class="p-4">
+        <ng-content></ng-content>
+    </div>
+</div>

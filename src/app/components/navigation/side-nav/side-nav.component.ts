@@ -1,29 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavItem } from './../../../models/nav-item/nav-item';
 
 
 @Component({
   selector: 'app-side-nav',
   standalone: true,
-  imports: [CommonModule, MatSidenavModule],
+  imports: [CommonModule, MatSidenavModule, RouterLink],
   templateUrl: './side-nav.component.html',
   styleUrl: './side-nav.component.css'
 })
-export class SideNavComponent implements OnInit {
+export class SideNavComponent {
   navItems: NavItem[] = [
     {
-      title: 'Characters'
+      title: 'Campaigns',
+      path: '/campaigns'
     },
     {
-      title: 'Sessions'
+      title: 'Adventurers',
+      path: '/adventurers'
     },
     {
       title: 'Magic Items'
     }
   ];
-
-  ngOnInit(): void {
-  }
 }
